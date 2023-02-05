@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="styles.css">
+
+<head>
+    <title>Dice Game</title>
+    <script src="main.js">
+    </script>
+</head>
+
+<body>
+    <div id="startScreen">
+        <h1>Welcome to the Dice Game</h1>
+        <label for="player1Name">Player 1 Name:</label>
+        <input type="text" id="player1Name">
+        <br>
+        <label for="player2Name">Player 2 Name:</label>
+        <input type="text" id="player2Name">
+        <br>
+        <label for="pointsToWin">Points to win:</label>
+        <input type="number" id="pointsToWin">
+        <br>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="gameScreen" style="display: none;">
+        <h1>Current Player: <span id="currentPlayerDisplay"></span></h1>
+        <h2>Round Points: <span id="roundPointsDisplay"></span></h2>
+        <h3>Player 1: <span id="player1NameDisplay"></span> - Points: <span id="player1PointsDisplay"></span></h3>
+        <h3>Player 2: <span id="player2NameDisplay"></span> - Points: <span id="player2PointsDisplay"></span></h3>
+        <button onclick="rollDice()">Roll Dice</button>
+        <button onclick="stopTurn()">Stop Turn</button>
+    </div>
+    <div id="winScreen" style="display: none;">
+        <h1>The Winner is: <span id="winner"></span></h1>
+    </div>
+</body>
+
+</html>
